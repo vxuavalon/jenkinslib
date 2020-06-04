@@ -52,7 +52,7 @@ pipeline {
                                 tools.PrintMes("应用打包",'green')
                                 mvnHome = tool "m2"
                                 println(mvnHome)
-                                sh '${mvnHome}/bin/mvn --version'
+                                sh "${mvnHome}/bin/mvn --version"
                         
                             }
                         }
