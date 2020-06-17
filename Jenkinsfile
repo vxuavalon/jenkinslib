@@ -1,3 +1,4 @@
+#！groovy
 pipeline{
     agent  {node {label "master"}}
     
@@ -7,8 +8,8 @@ pipeline{
           steps{
              script{
              
-               mvnHome = tools "M2"
-               sh "${mvnHome/bin/mvn -v}"
+               mvnHome = tool "M2"
+               sh "${mvnHome}/bin/mvn -v}"
           
             }
          }
