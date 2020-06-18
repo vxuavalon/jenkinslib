@@ -1,25 +1,5 @@
+
 #!groovy
-pipeline{
-    agent  {node {label "master"}}
-    
-    
-    stages{
-       stage("build"){
-          steps{
-             script{
-             
-               mvnHome = tool "m2"
-               sh "${mvnHome}/bin/mvn -v}"
-          
-            }
-         }
-       }
-    }
-}
-
-
-
-/*#!groovy
 
 @Library('jenkinslib') _
 
@@ -121,4 +101,4 @@ pipeline {
             }
         }
     }
-}*/
+}
