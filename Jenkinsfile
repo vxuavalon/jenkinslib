@@ -30,7 +30,7 @@ pipeline {
                 timeout(time:5, unit:"MINUTES"){   //步骤超时时间
                     script{ //填写运行代码
                         println('获取代码')
-                        tools.PrintMes("获取代码",'green')
+                        tools.PrintMes("获取代码",'green1')
                         println("${test}")
                         
                         input id: 'Test', message: '我们是否要继续？', ok: '是，继续吧！', parameters: [choice(choices: ['a', 'b'], description: '', name: 'test1')], submitter: 'lizeyang,admin'
@@ -49,7 +49,7 @@ pipeline {
                         timeout(time:20, unit:"MINUTES"){
                             script{
                                 println('应用打包')
-                                tools.PrintMes("应用打包",'green')
+                                tools.PrintMes("应用打包",'green1')
                                 mvnHome = tool "M2"
                                 println(mvnHome)
                                 sh "${mvnHome}/bin/mvn --version"
